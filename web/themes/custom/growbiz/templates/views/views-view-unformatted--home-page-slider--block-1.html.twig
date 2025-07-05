@@ -1,0 +1,44 @@
+<section class="slider-area p-relative fix">
+            <div class="slider-active swiper-container">
+                <div class="swiper-wrapper">
+				{% for row in rows %}
+                    <div class="single-slider slider-height swiper-slide slider-overlay" data-swiper-autoplay="5000">
+                        <div class="slide-bg" data-background="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_slider_image }}'] }}"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <div class="hero-content">
+                                        <div class="hero-bg-shape" data-animation="fadeInUp" data-delay=".3s">
+                                            <div class="hero-s-1">
+                                                <img src="{{ directory }}/assets/img/shape/hero-s-1.png" alt="">
+                                            </div>
+                                            <div class="hero-s-2">
+                                                <img src="{{ directory }}/assets/img/shape/hero-s-2.png" alt="">
+                                            </div>
+                                        </div>
+                                        <p data-animation="fadeInUp" data-delay=".6s">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}</p>
+                                        <h1 data-animation="fadeInUp" data-delay=".9s">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_sub_title }}'] }}</h1>
+                                        <div class="hero-content-btn" data-animation="fadeInUp" data-delay="1.1s">
+                                            <a href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_link_for_page }}'] }}" class="grb-btn">Get Started</a>
+                                        </div>
+                                        <div class="hero-video-btn" data-animation="fadeInUp" data-delay="1.2s">
+                                            <a class="grb-video popup-video"
+                                                href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_link_for_video }}'] }}"><i
+                                                    class="fas fa-play"></i></a>
+                                            <p>Working Videos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   {% endfor %}
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="slider-nav">
+                    <div class="swiper-button-prev"><i class="far fa-arrow-left"></i></div>
+                    <div class="swiper-button-next"><i class="far fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </section>		

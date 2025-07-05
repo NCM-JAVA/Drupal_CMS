@@ -1,0 +1,64 @@
+<section class="team-area grey-bg pt-115 pb-90">
+    <div class="container">
+        <div class="row wow fadeInUp">
+            <div class="col-lg-12">
+                <div class="section-title mb-55 text-center">
+                    <div class="border-c-bottom">
+                        <p>Meet The Team</p>
+                    </div>
+                    <h2>Meet Our Experienced <br> & Skilled Team</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row wow fadeInUp">
+            {% for row in rows %}
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member mb-30">
+                        <div class="member-img">
+                           
+                                <a href="contact.html">
+                                    <img src="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}" alt="">
+                                </a>
+                           
+                                
+                            
+                        </div>
+
+                        <div class="member-name p-relative">
+                            <div class="member-name-bg">
+                                <img src="{{ directory }}/assets/img/shape/member-name-bg.png" alt="">
+                                <img src="{{ directory }}/assets/img/shape/member-name-c-bg.png" alt="">
+                            </div>
+                            <h5>
+                                <a href="contact.html">
+                                    {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}
+                                </a>
+                            </h5>
+							
+                            <span>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_category }}'] }}</span>
+
+                            <div class="member-social">
+                                <i class="far fa-plus"></i>
+                                <ul class="member-social-icons">
+                                  
+                                        <li><a href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_xyz_link }}'] }}"><i class="fab fa-skype"></i></a></li>
+                                    
+                                    
+                                        <li><a href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_insta_link }}'] }}"><i class="fab fa-instagram-square"></i></a></li>
+                                  
+                                    
+                                        <li><a href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_tiwitter_link }}'] }}"><i class="fab fa-twitter"></i></a></li>
+                                  
+                                    
+                                        <li><a href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_fb_link }}'] }}"><i class="fab fa-facebook-f"></i></a></li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

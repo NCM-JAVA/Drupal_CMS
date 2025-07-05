@@ -1,0 +1,56 @@
+<section class="portfolio-area">
+            <div class="container">
+                <div class="row wow fadeInUp align-items-center counter-head">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="portfolio-left">
+                            <div class="section-title mb-55">
+                           <div class="border-left">
+                                    <p>Portfolio</p>
+                                </div>
+                                <h2>Explore some Recent Projects</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5">
+                        <div class="portfolio-right mb-30 text-md-end">
+                            <a href="portfolio.html" class="grb-border-btn st-1">
+                                All Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-container">
+                <div class="portfolio-inner">
+                    <div class="swiper-container portfolio-active">
+                        <div class="swiper-wrapper">
+						{% for row in rows %}
+                            <div class="swiper-slide">
+                                <div class="single-portfolio">
+                                    <div class="portfolio-img">
+                                        <a href="portfolio-details.html"><img src="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_project_image }}'] }}"
+                                                alt=""></a>
+                                    </div>
+                                    <div class="portfolio-content">
+                                        <h5><a href="portfolio-details.html">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}'] }}</a></h5>
+                                        <span>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_sub_title }}'] }}</span>
+                                        <a class="p-link popup-image" href="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_project_image }}'] }}"><i
+                                                class="fal fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        
+                         {% endfor %}
+                      
+                           
+                        </div>
+                        <div class="portfolio-nav">
+                            <div class="swiper-button-prev"><i class="far fa-arrow-left"></i></div>
+                            <div class="swiper-button-next"><i class="far fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		

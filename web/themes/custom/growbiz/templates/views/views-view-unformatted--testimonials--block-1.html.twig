@@ -1,0 +1,58 @@
+<section class="testimonial-area st-1" data-background="{{ directory }}/assets/img/bg/bg-shape.png">
+            <div class="container">
+                <div class="row wow fadeInUp">
+                    <div class="col-lg-12">
+                        <div class="section-title mb-55 text-center">
+                            <div class="border-c-bottom">
+                                <p>Testimonials</p>
+                            </div>
+                            <h2>Some Expression Of <br> Our Clients</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wow fadeInUp justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="testimonial-wrapper p-relative">
+                            <div class="testimonial-content-inner">
+                                <div class="swiper-container testimonial-active">
+                                    <div class="swiper-wrapper">
+									{% for row in rows %}
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-single st-1 text-center">
+                                                <div class="testimonial-img">
+                                                    <img src="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_testimonials_image }}'] }}" alt="">
+                                                </div>
+                                                <p class="mb-30">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}</p>
+                                                <div class="testimonial-name">
+                                                    <h5>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_job_title }}'] }}</h5>
+                                                    <p>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_name }}'] }}</p>
+                                                </div>
+                                                <ul class="testimonial-review">
+												  {% set length = row.content['#view'].style_plugin.render_tokens[loop.index0]['{{field_rating}}'] | trim %}
+                                                {% for i in range(1, length) %}
+                                                    <li><i class="fas fa-star"></i></li>
+                                                 {% endfor %}
+                                                   
+                                                   
+                                                  
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       {% endfor %} 
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="testimonial-nav-1 testimonial-nav-arrow">
+                                <div class="testimonial1-button-prev"><i class="far fa-arrow-left"></i></div>
+                                <div class="testimonial1-button-next"><i class="far fa-arrow-right"></i></div>
+                            </div>
+                            <div class="testimonial-quote">
+                                <i class="fal fa-quote-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	

@@ -1,0 +1,32 @@
+
+<!-- Wrap all sliders in a container -->
+   
+         <div class="flexSlider">
+{% for row in rows %}		 <!-- Keep individual slider divs -->
+            <ul class="slides">
+               <li><img src="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_slider_image }}'] }}"></li>
+			    {% endfor %}
+            </ul>
+			  
+         </div>
+   
+  
+
+
+--------
+
+    <section class="wrapper banner-wrapper">
+
+         <div id="flexSlider" class="flexslider">
+            <ul class="slides">
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider1"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider2"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider3"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider4"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider4"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider5"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider6"></li>
+               <li><img src="{{ directory }}/theme/images/banner/slider-1.jpg" alt="Home slider7"></li>
+            </ul>
+         </div>
+      </section>

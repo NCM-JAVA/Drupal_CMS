@@ -1,0 +1,12 @@
+<?php
+function growbiz_preprocess_page (&$var){
+$var['call_us'] = theme_get_setting( setting_name: 'call_us');
+$var['header_mail'] = theme_get_setting( setting_name: 'header_mail');
+$var['service_hours'] = theme_get_setting( setting_name: 'service_hours');
+$var['facebook'] = theme_get_setting( setting_name: 'facebook');
+$var['twitter'] = theme_get_setting( setting_name: 'twitter');
+$var['instagram'] = theme_get_setting( setting_name: 'instagram');
+$var['youtube'] = theme_get_setting( setting_name: 'youtube');
+
+
+}

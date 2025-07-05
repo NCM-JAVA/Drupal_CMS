@@ -1,0 +1,35 @@
+# These will be loaded on every pages.
+global-styling:
+  version: VERSION
+  css:
+    
+    theme:
+      assets/css/animate.min.css: {}
+      assets/css/custom-animation.css: {}
+      assets/css/flaticon.css: {}
+      assets/css/fontawesome-all.min.css: {}
+      assets/css/magnific-popup.css: {}
+      assets/css/main.css: {}
+      assets/css/meanmenu.css: {}
+      assets/css/odometer-theme-default.css: {}
+      assets/css/swiper-bundle.css: {}
+      assets/css/bootstrap.min.css: {}
+
+  js:
+    assets/js/ajax-form.js: {}
+    assets/js/appair.min.js: {}
+    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/imagesloaded.pkgd.min.js: {}
+    assets/js/isotope.pkgd.min.js: {}
+    assets/js/jquery.magnific-popup.min.js: {}
+    assets/js/jquery.meanmenu.min.js: {}
+    assets/js/jquery.scrollUp.min.js: {}
+    assets/js/jquery-3.6.0.min.js: {}
+    assets/js/main.js: {}
+    assets/js/odometer.min.js: {}
+    assets/js/plugins.js: {}
+    assets/js/swiper-bundle.js: {}
+    assets/js/wow.min.js: {}
+    
+  dependencies:
+    - core/jquery
